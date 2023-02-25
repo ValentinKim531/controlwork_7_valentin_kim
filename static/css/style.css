@@ -35,6 +35,11 @@ a {
     color: black;
 }
 
+img {
+    height: 70px;
+    width: 70px;
+}
+
 .button-text-color {
     color: white;
 }
@@ -91,7 +96,7 @@ a {
 footer {
     flex: 0 0 auto;
     padding: 1rem;
-    background: #212529;
+    background: #1a8754;
     color: rgb(255 255 255 / 55%);
 }
 

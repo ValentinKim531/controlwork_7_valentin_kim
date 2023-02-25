@@ -12,17 +12,6 @@ def records_view(request: WSGIRequest):
     }
     return render(request, 'records.html', context=context)
 
-
-# def delete_product(request, pk):
-#     product = get_object_or_404(Products, pk=pk)
-#     return render(request, 'product_confirm_delete.html', context={'product': product})
-
-
-# def confirm_delete(request, pk):
-#     product = get_object_or_404(Products, pk=pk)
-#     product.delete()
-#     return redirect('products')
-
 def record_add(request: WSGIRequest):
     if request.method == "GET":
         form = GuestbookForm()
@@ -53,3 +42,15 @@ def record_edit(request, pk):
 
     form = GuestbookForm(instance=record)
     return render(request, 'record_edit_view.html', context={'form': form,'record': record})
+
+
+
+def delete_record(request, pk):
+    record = get_object_or_404(Guestbook, pk=pk)
+    return render(request, 'record_confirm_delete.html', context={'record': record})
+
+
+def confirm_delete(request, pk):
+    record = get_object_or_404(Guestbook, pk=pk)
+    record.delete()
+    return redirect('index')
