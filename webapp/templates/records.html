@@ -14,8 +14,12 @@
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">
                             {{ record.author_name }} ({{ record.mail }})
-                            <a class="icons" href="#"><i class="fa-regular fa-2x fa-pen-to-square"></i></a>
-                            <a class="icons" href="#"><i class="fa-regular fa-2x fa-trash-can"></i></a>
+                            <a class="icons" href="{% url 'record_add' %}">
+                                <i class="fa-regular fa-2x fa-trash-can"></i>
+                            </a>
+                            <a class="icons" href="{% url 'record_edit' record.pk %}">
+                                <i class="fa-regular fa-2x fa-pen-to-square"></i>
+                            </a>
                         </div>
                         <br>
                         <div class="fw-bold">{{ record.text }} </div>
