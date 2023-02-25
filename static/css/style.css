@@ -9,11 +9,17 @@
 html,
 body {
     height: 100%;
+    background: url(../img/main-pic.png) repeat;
+    background-size: cover;
 }
 
 body {
     display: flex;
     flex-direction: column;
+}
+
+.nav-link {
+    font-weight: bolder;
 }
 
 .content {
@@ -23,6 +29,10 @@ body {
 
 .container {
     margin: 0 auto;
+}
+
+.title {
+    text-align: center;
 }
 
 .fw-bold > .icons {
@@ -40,64 +50,38 @@ img {
     width: 70px;
 }
 
-.button-text-color {
-    color: white;
-}
-
-.button_padding {
-    padding-left: 10px;
-}
-
-.image_flex_products {
-    display: block;
-    width: 25%;
-    height: 25%;
-    object-fit: cover;
-    margin: 0 auto;
+.font-size {
+    font-size: larger;
 }
 
 .copyright-text {
     font-size: 12px;
 }
-.image_flex_product {
-    display: block;
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    margin: 0 auto;
-}
 
-.row {
-    padding-top: 50px;
-}
 
-.title {
-    padding-top: 30px;
-}
-
-.width {
-    width: 600px;
-}
-
-.transfer_text_space {
-    white-space: pre-wrap;
-}
-
-.card {
-    border: none;
-}
-
-.list-group {
-    padding-bottom: 10px;
+.list-group, .width {
+    padding-bottom: 5px;
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
 }
 
+.list-group-item {
+    background-image: linear-gradient(to left, #b9d7df, #1c7d94);
+}
+
+.buttons {
+    text-align: center;
+    
+}
 
 footer {
     flex: 0 0 auto;
     padding: 1rem;
-    background: #1a8754;
-    color: rgb(255 255 255 / 55%);
+    background: hwb(191deg 18% 5%);
+    color: rgb(27 93 108);
 }
 
 .footer-title {

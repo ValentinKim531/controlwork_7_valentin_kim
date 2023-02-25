@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}Product add{% endblock %}
+{% block title %}Record add{% endblock %}
 
 {% block content %}
 <form class="width" action="{% url 'record_add' %}" method="post">
-    <h1 class="title">Add record</h1>
+    <h1 class="title">Добавить новую запись</h1>
     {% include 'partial/records_form.html' with button_text='Добавить' %}
 </form>
 {% endblock %}

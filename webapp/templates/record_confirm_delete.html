@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    <h1>Are you sure you want to delete the record?</h1>
+    <h1 class="title">Вы уверены в удалении записи?</h1>
     <div class="row row-cols-1 g-4">
         <div class="col">
             <ol class="list-group">
@@ -21,8 +21,10 @@
             </ol>
         </div>
     </div>
-    <span class="button_padding"><a href="{% url 'confirm_delete' record.pk %}" class="btn btn-danger">Yes</a></span>
-    <span class="button_padding"><a href="{% url 'index' %}" class="btn btn-info">No</a></span>
+    <div class="buttons">
+        <span class="button_padding"><a href="{% url 'confirm_delete' record.pk %}" class="btn btn-danger">Да</a></span>
+        <span class="button_padding"><a href="{% url 'index' %}" class="btn btn-info">Нет</a></span>
+    </div>
 </div>
 
 {% endblock %}
