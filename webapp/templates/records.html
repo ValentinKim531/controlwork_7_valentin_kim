@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block menu %}
+
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row row-cols-1 g-4">
+        {% for record in records %}
+        <div class="col">
+            <ol class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">
+                            {{ record.author_name }} ({{ record.mail }})
+                            <a class="icons" href="#"><i class="fa-regular fa-2x fa-pen-to-square"></i></a>
+                            <a class="icons" href="#"><i class="fa-regular fa-2x fa-trash-can"></i></a>
+                        </div>
+                        <br>
+                        <div class="fw-bold">{{ record.text }} </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        {% endfor %}
+</div>
+</div>
+{% endblock %}
