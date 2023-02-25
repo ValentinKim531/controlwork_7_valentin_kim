@@ -29,6 +29,7 @@ body {
 
 .container {
     margin: 0 auto;
+    width: 70%;
 }
 
 .title {
@@ -46,8 +47,8 @@ a {
 }
 
 img {
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90x;
 }
 
 .font-size {
